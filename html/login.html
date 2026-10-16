@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar – NEXUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <a class="crumb" style="display:block" href="index.html">← Voltar ao início</a>
+      <form class="form box" id="formLogin">
+        <h1>Entrar na sua conta</h1>
+        <p style="color:var(--mut)">Acesse seus pedidos na NEXUS.</p>
+        <label>E-mail<input id="email" type="email" placeholder="seuemail@exemplo.com"></label>
+        <label>Senha<input id="senha" type="password" placeholder="Digite sua senha"></label>
+
+        <button type="button" class="link" onclick="mostrarOuOcultarSenha()">👁 Mostrar / Ocultar senha</button>
+        <div style="clear:both"></div>
+        <div class="err" id="erro"></div>
+        <button class="btn full" type="submit">Entrar</button>
+        <hr style="border:0;border-top:1px solid var(--bd);margin:18px 0 10px">
+        <p style="text-align:center">Ainda não tem uma conta?<br><a class="btn o full" style="margin-top:8px" href="cadastro.html">Criar conta</a></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

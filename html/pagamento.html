@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagamento – NEXUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="checkout.html">Dados de entrega</a> › Pagamento</div>
+      <h1 style="font-size:30px">Pagamento</h1>
+      <p class="aviso">Pagamento SIMULADO. Não digite dados reais de cartão ou banco.</p>
+      <div class="cl">
+        <form id="formPagamento" class="box">
+          <h3>Escolha a forma de pagamento</h3>
+          <label class="opt"><input type="radio" name="forma" value="pix" checked> Pix (aprovação imediata)</label>
+          <label class="opt"><input type="radio" name="forma" value="cartao"> Cartão de crédito (12x sem juros)</label>
+          <label class="opt"><input type="radio" name="forma" value="boleto"> Boleto bancário</label>
+          <p id="explicacao" class="parc" style="margin:14px 0"></p>
+          <button class="btn g full" type="submit">Finalizar pagamento (simulado)</button>
+        </form>
+        <aside class="box sum" id="resumo"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

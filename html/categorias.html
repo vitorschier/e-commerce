@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos – NEXUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">Início</a> › Produtos</div>
+      <h1 id="titulo" style="font-size:32px">Curadoria de Eletrônicos</h1>
+
+      <div class="lay">
+        <!-- Filtros -->
+        <aside class="box">
+          <h3 style="font-size:16px">Filtros</h3>
+          <h4>Preço máximo: <span id="precoMax"></span></h4>
+          <input type="range" id="filtroPreco" min="100" max="3000" step="50" value="3000">
+          <h4>Marca</h4>
+          <select id="filtroMarca" class="in"></select>
+        </aside>
+
+        <!-- Lista de produtos -->
+        <div>
+          <div class="box bar">
+            <span id="contagem"></span>
+            <select id="ordenar">
+              <option value="">Ordenar por: Relevância</option>
+              <option value="menor">Ordenar por: Menor preço</option>
+              <option value="maior">Ordenar por: Maior preço</option>
+            </select>
+          </div>
+          <div class="grid auto" id="listaProdutos"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout – NEXUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="carrinho.html">Carrinho</a> › Dados de entrega</div>
+      <h1 style="font-size:30px">Finalizar compra</h1>
+      <p class="aviso">Ambiente de demonstração: nenhum pagamento real é processado.</p>
+      <div class="cl">
+        <form id="formCheckout" class="box">
+          <h3>1. Seus dados</h3>
+          <div class="form largo">
+        <label>Nome completo<input id="nome" type="text" placeholder="Digite seu nome completo"></label>
+        <label>E-mail<input id="email" type="email" placeholder="seuemail@exemplo.com"></label>
+        <label>Telefone<input id="telefone" type="tel" placeholder="(51) 99999-9999"></label>
+
+            <h3 style="margin-top:22px">2. Endereço de entrega</h3>
+        <label>Endereço (rua e número)<input id="endereco" type="text" placeholder=""></label>
+
+            <div class="two">
+        <label>Cidade<input id="cidade" type="text" placeholder=""></label>
+        <label>Estado<select id="estado" class="in"></select></label>
+
+            </div>
+        <label>CEP<input id="cep" type="text" placeholder="00000-000"></label>
+
+            <div class="err" id="erro"></div>
+            <button class="btn g full" type="submit">Continuar para o pagamento</button>
+          </div>
+        </form>
+        <aside class="box sum" id="resumo"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
