@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartão de débito – NEXUS</title>
+  <link rel="icon" href="../img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="pagamento.html">Pagamento</a> › Cartão de débito</div>
+      <h1 style="font-size:30px">Pagamento com cartão de débito</h1>
+      <p class="aviso">Pagamento SIMULADO. Nenhum valor será cobrado e nenhum dado real é pedido.</p>
+      <div class="cl">
+        <div class="box" id="telaProcessamento" data-forma="debito" style="text-align:center">
+          <!-- Passo 1: aguardando (o JavaScript troca para o passo 2 depois de 3 segundos) -->
+          <div id="aguardando">
+            <div class="spinner"></div>
+            <h3>Processando pagamento...</h3>
+            <p style="color:var(--mut)">Aguarde enquanto o seu banco aprova o débito.</p>
+          </div>
+          <!-- Passo 2: aprovado -->
+          <div id="aprovado" style="display:none">
+            <div style="font-size:48px">✅</div>
+            <h3>Débito aprovado!</h3>
+            <p id="detalhe" style="color:var(--mut)"></p>
+            <button class="btn g full" id="btnConfirmar" type="button" style="margin-top:14px">Ver confirmação do pedido</button>
+          </div>
+          <p style="margin-top:14px"><a class="link" style="float:none" href="pagamento.html">Escolher outra forma de pagamento</a></p>
+        </div>
+        <aside class="box sum" id="resumo"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

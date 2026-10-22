@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boleto bancário – NEXUS</title>
+  <link rel="icon" href="../img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="pagamento.html">Pagamento</a> › Boleto</div>
+      <h1 style="font-size:30px">Pagamento com boleto</h1>
+      <p class="aviso">Pagamento SIMULADO. Nenhum valor será cobrado e nenhum dado real é pedido.</p>
+      <div class="cl">
+        <div class="box" id="telaProcessamento" data-forma="boleto" style="text-align:center">
+          <h3>Boleto gerado</h3>
+          <p>Vencimento: <b id="vencimento"></b></p>
+          <label style="display:block;text-align:left;font-weight:600;font-size:12px;margin:10px 0 14px">Linha digitável (demonstração)
+            <input class="in" readonly value="23790.00000 00000.000000 00000.000000 0 00000000000000">
+          </label>
+          <button class="btn g full" id="btnConfirmar" type="button">Já paguei o boleto</button>
+          <p style="margin-top:14px"><a class="link" style="float:none" href="pagamento.html">Escolher outra forma de pagamento</a></p>
+        </div>
+        <aside class="box sum" id="resumo"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

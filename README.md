@@ -15,14 +15,18 @@ html/               -> uma página para cada tela
   produto.html        detalhes do produto
   carrinho.html       carrinho de compras
   checkout.html       dados do cliente e endereço
-  pagamento.html      pagamento simulado
+  pagamento.html      escolha da forma de pagamento (Pix, crédito, débito ou boleto)
+  processando-pix.html      tela intermediária do Pix (QR Code, código e tempo)
+  processando-credito.html  tela intermediária do cartão de crédito
+  processando-debito.html   tela intermediária do cartão de débito
+  processando-boleto.html   tela intermediária do boleto
   sucesso.html        pedido confirmado
   login.html / cadastro.html
 css/style.css       -> todo o visual (cores, cards, tema claro/escuro, responsivo)
 js/produtos.js      -> lista de produtos (array de objetos)
 js/carrinho.js      -> funções do carrinho (adicionar, +, -, remover, subtotal, total)
 js/script.js        -> cabeçalho, rodapé, busca, filtros e lógica de cada página
-img/                -> fotos dos produtos (extraídas do PDF)
+img/                -> fotos dos produtos (extraídas do PDF) e logo.png (logo da loja)
 ```
 
 ## Como o programa funciona (para explicar na apresentação)
@@ -31,7 +35,12 @@ img/                -> fotos dos produtos (extraídas do PDF)
 3. **Carrinho**: é um array `[{ id, quantidade }]` salvo no `localStorage`, que guarda os dados no navegador e mantém o carrinho ao trocar de página.
    - `adicionarAoCarrinho`, `mudarQuantidade`, `removerItem`
    - `calcularSubtotal` (soma preço × quantidade), `calcularFrete` (grátis a partir de R$ 200) e `calcularTotal`
-4. **Fluxo de compra**: produto → carrinho → checkout (valida o formulário e salva o cliente) → pagamento (Pix, cartão ou boleto, simulado) → sucesso (mostra o pedido e limpa o carrinho).
+4. **Fluxo de compra**: produto → carrinho → checkout (valida o formulário e salva o cliente) → pagamento (escolhe a forma) → **tela intermediária da forma escolhida** → sucesso (mostra o pedido e limpa o carrinho).
+   - Em `pagamento.html`, o objeto `telasDePagamento` (em `script.js`) diz qual página abrir: `pix`, `credito`, `debito` ou `boleto`.
+   - O pedido só é criado (`criarPedido`) quando o cliente confirma na tela intermediária.
+   - Se alguém abrir uma tela `processando-*.html` direto, sem escolher a forma, o site volta para o pagamento.
+6. **Tema claro/escuro**: o botão fica no cabeçalho (`alternarTema`) e a escolha é salva no `localStorage`, então vale em todas as páginas.
+7. **Logo**: `img/logo.png` fica sobre um quadrado branco (`.logo-box` no CSS), porque a imagem é preta com fundo transparente e precisa aparecer no cabeçalho escuro.
 5. **Página certa, código certo**: no fim do `script.js`, cada página só executa sua função se o elemento dela existir (por exemplo, `if (document.getElementById("formCheckout"))`).
 
 ## Git e GitHub

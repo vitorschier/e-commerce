@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagamento via Pix – NEXUS</title>
+  <link rel="icon" href="../img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- O cabeçalho e o rodapé são criados pelo JavaScript (js/script.js) -->
+  <div id="cabecalho"></div>
+
+  <main>
+    <div class="wrap">
+      <div class="crumb"><a href="pagamento.html">Pagamento</a> › Pix</div>
+      <h1 style="font-size:30px">Pagamento via Pix</h1>
+      <p class="aviso">Pagamento SIMULADO. Nenhum valor será cobrado e nenhum dado real é pedido.</p>
+      <div class="cl">
+        <div class="box" id="telaProcessamento" data-forma="pix" style="text-align:center">
+          <h3>Escaneie o QR Code ou copie o código</h3>
+          <div class="qr">QR Code<br>de demonstração</div>
+          <p>Este código expira em <b id="tempo">10:00</b></p>
+          <label style="display:block;text-align:left;font-weight:600;font-size:12px;margin-top:10px">Pix copia e cola
+            <input class="in" id="codigoPix" readonly value="00020126NEXUSDEMONSTRACAO5204000053039865802BR5905NEXUS6009SAOPAULO">
+          </label>
+          <p style="margin:12px 0"><button class="btn o" id="btnCopiar" type="button">Copiar código</button></p>
+          <button class="btn g full" id="btnConfirmar" type="button">Já fiz o pagamento</button>
+          <p style="margin-top:14px"><a class="link" style="float:none" href="pagamento.html">Escolher outra forma de pagamento</a></p>
+        </div>
+        <aside class="box sum" id="resumo"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="../js/produtos.js"></script>
+  <script src="../js/carrinho.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
