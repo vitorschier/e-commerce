@@ -1,4 +1,4 @@
-# NEXUS – Loja virtual (projeto escolar)
+# NEXUS – Loja virtual
 
 Loja de tecnologia feita com **HTML, CSS e JavaScript puro**, baseada no protótipo do Figma. Todo o texto está em português (pt-BR) e os preços em reais (R$). **Nenhum pagamento é real**: o checkout é só uma simulação e não pede dados de cartão ou banco.
 
